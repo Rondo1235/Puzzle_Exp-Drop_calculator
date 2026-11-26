@@ -1,22 +1,24 @@
 {
-  "name": "Puzzle Experience Calculator",
-  "short_name": "Puzzle Experience Calculator",
-  "start_url": "/PaD_experience_calculator/",
-  "scope": "/PaD_experience_calculator/",
+  "name": "Puzzle Exp＆Drop Calculator",
+  "short_name": "Puzzle Exp＆Drop Calculator",
+  "description": "Puzzle & Dragons EXP and drop rate calculator",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#222222",
-  "theme_color": "#222222",
-  "description": "Puzzle Experience Calculator",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
