@@ -245,10 +245,6 @@
 
         <select id="friend"></select>
 
-        <button onclick="calculateAll()">
-            計算
-        </button>
-
         <div class="result-box">
 
             <div class="result-title">
@@ -362,7 +358,6 @@
             <select id="dropFriendExp" aria-label="フレンドの経験値倍率"></select>
             <label for="dropDumbo">ダンボ数</label>
             <input type="number" id="dropDumbo" value="0" min="0" step="1" inputmode="numeric">
-            <button type="button" id="calculateDropButton">計算</button>
             <div class="result-box" aria-live="polite">
                 <div class="result-title">結果の値</div>
                 <div class="drop-result" id="dropResult">15%</div>
@@ -694,7 +689,10 @@
             field.addEventListener("input", calculateAll);
             field.addEventListener("change", calculateAll);
         });
-        document.getElementById("calculateDropButton").addEventListener("click", calculateDrop);
+        document.querySelectorAll("#dropPanel input, #dropPanel select").forEach((field) => {
+            field.addEventListener("input", calculateDrop);
+            field.addEventListener("change", calculateDrop);
+        });
         document.getElementById("expTab").addEventListener("click", () => setTab("exp"));
         document.getElementById("dropTab").addEventListener("click", () => setTab("drop"));
         function setTab(name) {
